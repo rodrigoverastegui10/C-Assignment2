@@ -11,15 +11,18 @@ int CalculateArea(int length, int width);
 void DisplayArea(int area);
 
 int main()
-{
-	int length = GetLengthFromUser();
-	int width = GetWidthFromUser();
+{	
+	int main = -1;
+	while (main <= 0)
+	{
+		int length = GetLengthFromUser();
+		int width = GetWidthFromUser();
 
 
-	int area = CalculateArea(length, width);
+		int area = CalculateArea(length, width);
 
-	DisplayArea(area);
-
+		DisplayArea(area);
+	}
 	(void)_getch();
 	return 0;
 }
@@ -65,5 +68,5 @@ int CalculateArea(int length, int width)
 
 void DisplayArea(int area)
 {
-	cout << "The rectangle is: " << area << ".\n";
+	cout << "The rectangle area is: " << area << ".\n";
 }
